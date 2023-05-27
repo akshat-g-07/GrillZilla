@@ -1,4 +1,4 @@
-import MenuApp from "./components/js/MenuAppv2";
+import MenuApp from "./components/js/MenuApp";
 
 function App() {
   return (
