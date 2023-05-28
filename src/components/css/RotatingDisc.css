@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+}
+
+.plate {
+  position: fixed;
+  scale: 2.5;
+  left: -10rem;
+  top: 11.5rem;
+  z-index: 1;
+}
+
+.plate_bg {
+  position: fixed;
+  transform-origin: top left;
+  z-index: 0;
+}
+
+.itemholder {
+  position: fixed;
+  top: 16rem;
+  left: -4rem;
+  color: #ee540d;
+  z-index: 3;
+}
+
+.itemholder i {
+  transition: font-size 0.5s ease-out;
+  z-index: 10;
+}
+
+.menu_bg {
+  position: fixed;
+  right: 16rem;
+  scale: 1.5 1;
+  z-index: 3;
+}
+
+.menu_select {
+  position: fixed;
+  left: -2.5rem;
+  top: 1rem;
+  z-index: 2;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
