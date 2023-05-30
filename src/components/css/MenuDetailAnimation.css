@@ -35,3 +35,12 @@
     z-index: 4;
   }
 }
+
+@keyframes clearing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
