@@ -1,0 +1,37 @@
+.comingup {
+  animation: showingup 1.5s ease-out;
+}
+
+.comingdown {
+  animation: showingdown 1.5s ease-out;
+}
+
+.going {
+  animation: clearing 0.5s ease-in;
+}
+
+@keyframes showingup {
+  from {
+    opacity: 0;
+    top: 0rem;
+    z-index: 10;
+  }
+  to {
+    opacity: 1;
+    top: 6rem;
+    z-index: 4;
+  }
+}
+
+@keyframes showingdown {
+  from {
+    opacity: 0;
+    top: 12rem;
+    z-index: 10;
+  }
+  to {
+    opacity: 1;
+    top: 6rem;
+    z-index: 4;
+  }
+}
