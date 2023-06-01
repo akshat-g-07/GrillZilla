@@ -12,10 +12,38 @@ const RotatingDisc = ({ setMenuType }) => {
       setRotationAngle(window.scrollY / 5);
     };
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [rotationAngle]);
+
+  const updatedItemTypes = itemTypes.map((item) => {
+    let itemAngle = item.id * angle;
+    let x = radius * Math.cos((itemAngle + rotationAngle) * (Math.PI / 180));
+    let y = radius * Math.sin((itemAngle + rotationAngle) * (Math.PI / 180));
+
+    return (
+      <i
+        key={item.key}
+        className={item.className}
+        style={{
+          position: "absolute",
+          top: `${y}rem`,
+          left: `${x}rem`,
+          fontSize: x === 16 ? "7.5rem" : "5rem",
+          animation: x === 16 ? "vibrate 0.5s ease-out" : "",
+        }}
+      ></i>
+    );
+  });
+
+  let menuType = updatedItemTypes
+    .filter((item) => parseInt(item.props.style.left) === 16)
+    .find((item) => true)?.key;
+  if (menuType) {
+    setMenuType(menuType);
+  }
 
   return (
     <>
@@ -29,34 +57,7 @@ const RotatingDisc = ({ setMenuType }) => {
           ></img>
           <img className="plate_bg" src="images/plate_bg.png" alt=""></img>
 
-          <div className="itemholder">
-            {itemTypes.map((item) => {
-              let itemAngle = item.id * angle;
-              let x =
-                radius *
-                Math.cos((itemAngle + rotationAngle) * (Math.PI / 180));
-              let y =
-                radius *
-                Math.sin((itemAngle + rotationAngle) * (Math.PI / 180));
-              if (x === 16) {
-                setMenuType(item.key);
-              }
-
-              return (
-                <i
-                  key={item.key}
-                  className={item.className}
-                  style={{
-                    position: "absolute",
-                    top: `${y}rem`,
-                    left: `${x}rem`,
-                    fontSize: x === 16 ? "7.5rem" : "5rem",
-                    animation: x === 16 ? "vibrate 0.5s ease-out" : "",
-                  }}
-                ></i>
-              );
-            })}
-          </div>
+          <div className="itemholder">{updatedItemTypes}</div>
         </div>
         <div className="menuholder">
           <img className="menu_bg" src="images/menu_bg.png" alt=""></img>
