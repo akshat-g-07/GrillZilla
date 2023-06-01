@@ -1,48 +1,56 @@
-import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
 import "../css/MenuDetail.css";
-import "../css/MenuDetailAnimation.css";
 import { menuItems } from "./MenuItems";
 
 const MenuDetail = ({ menuTypeId }) => {
-  let scrollY = useRef(0);
+  const bodyVariant = {
+    hidden: {
+      y: -80,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
 
-  const [menuTypeIdDelay, setMenuTypeIdDelay] = useState();
-
-  useEffect(() => {
-    const menuFolder = document.querySelector(".menufolder");
-
-    menuFolder.classList.add("going");
-    setTimeout(() => {
-      menuFolder.classList.remove("going");
-      setMenuTypeIdDelay(menuTypeId);
-    }, 500);
-
-    if (scrollY.current <= window.scrollY) {
-      menuFolder.classList.add("comingup");
-      setTimeout(() => {
-        menuFolder.classList.remove("comingup");
-      }, 2000);
-    } else {
-      menuFolder.classList.add("comingdown");
-      setTimeout(() => {
-        menuFolder.classList.remove("comingdown");
-      }, 2000);
-    }
-
-    scrollY.current = window.scrollY;
-  }, [menuTypeId]);
+  const itemVariant = {
+    hidden: { y: -50, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
 
   const filteredItems = menuItems.filter(
-    (menuItem) => menuItem.key === menuTypeIdDelay
+    (menuItem) => menuItem.key === menuTypeId
   );
+
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [menuTypeId]);
 
   return (
     <>
-      <div className="menufolder">
-        <div className="menutype">{menuTypeIdDelay}</div>
-        <div className="menubody">
+      <motion.div className="menufolder">
+        <div className="menutype">{menuTypeId}</div>
+        <motion.div
+          key={key}
+          variants={bodyVariant}
+          initial="hidden"
+          animate="visible"
+          className="menubody"
+        >
           {filteredItems.map((item) => (
-            <div className="menudetails" key={item.name}>
+            <motion.div
+              className="menudetails"
+              key={item.name}
+              variants={itemVariant}
+              whileHover={{ scale: 1.1 }}
+            >
               <div>
                 <p className="itemname">{item.name}</p>
                 <span className="itemdetail">{item.detail}</span>
@@ -50,10 +58,10 @@ const MenuDetail = ({ menuTypeId }) => {
               <div>
                 <p className="itemprice">{item.price}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 };
