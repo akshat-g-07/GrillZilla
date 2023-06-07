@@ -14,7 +14,7 @@ const DirectionsAPI = ({ destLatValue, destLongValue }) => {
   const [path, setPath] = useState(null);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBWGcbh8_8fKQJzO5txWexiZwLJqP3ZSxs",
+    googleMapsApiKey: ,
   });
 
   useEffect(() => {
