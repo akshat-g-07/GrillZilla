@@ -1,0 +1,46 @@
+.chefdetailholder {
+  height: 77.5vh;
+  width: 65vw;
+  position: absolute;
+  top: 6.5rem;
+  right: 2.5%;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 30% 70%;
+  box-sizing: border-box;
+}
+
+.chefname {
+  height: 100%;
+  width: 100%;
+  font-family: "Staatliches", cursive;
+  font-size: 5vw;
+  padding: 7.5%;
+  box-sizing: border-box;
+}
+
+.chefphoto {
+  height: 100%;
+  width: 100%;
+  grid-row: span 2;
+}
+
+.chefphoto img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  border-radius: 20%;
+}
+
+.chefdetails {
+  height: 100%;
+  width: 100%;
+  font-family: "Metrophobic", sans-serif;
+  text-align: justify;
+  font-size: 1.5vw;
+  padding: 7.5%;
+  box-sizing: border-box;
+}
