@@ -1,0 +1,16 @@
+.addressdetails {
+  width: 15rem;
+  direction: ltr;
+  text-align: center;
+  box-shadow: 2px 5px 15px black;
+  background-image: linear-gradient(to bottom, #ee540d, #ecbba4);
+  font-family: "Staatliches", cursive;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  height: auto;
+}
+
+.hide {
+  overflow: hidden;
+  height: 0rem;
+}
