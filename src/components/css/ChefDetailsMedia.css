@@ -1,0 +1,28 @@
+@media screen and (max-width: 767px) {
+  .chefdetailholder {
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 40%;
+    right: 17%;
+  }
+
+  .chefname {
+    text-align: center;
+  }
+
+  .chefphoto img {
+    height: 50%;
+    margin: 15% auto auto auto;
+    inset: 0;
+  }
+
+  .chefdetails {
+    font-size: 2.5vw;
+    padding: 17.5%;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 768px) {
+  .chefphoto img {
+    height: 75%;
+  }
+}
