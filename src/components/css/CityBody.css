@@ -1,0 +1,22 @@
+.cityheader.inview::after {
+  content: "";
+  background-color: #ee540d;
+  display: flex;
+  scale: 0 1;
+  height: 5px;
+  position: relative;
+  top: -8px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cityheader.inview:hover::after {
+  top: 0px;
+  scale: 1.1 1;
+  opacity: 1;
+}
+
+.cityheader.inview {
+  background-image: none;
+  border-bottom: none;
+}
