@@ -1,0 +1,26 @@
+.testimonialholder {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 6.75rem;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.testimonial {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48.5%;
+  height: 100%;
+  margin: auto;
+  inset: 0;
+}
+
+.testimonial p {
+  font-size: 1.25vw;
+  transform: rotateZ(-11deg);
+  text-align: justify;
+  width: 80%;
+  margin: 35% auto auto 12.5%;
+  pointer-events: none;
+}
