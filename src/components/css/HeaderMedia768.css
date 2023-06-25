@@ -1,0 +1,83 @@
+@media screen and (max-width: 767px) {
+  .headerbutton {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+  }
+
+  .plate_bg.responsive {
+    transform: translateX(-100%);
+  }
+
+  .menu_bg.responsive {
+    right: 27.5%;
+  }
+
+  .inner_bg.responsive {
+    left: 22%;
+  }
+
+  .navbar {
+    height: 0;
+    width: 0;
+  }
+
+  .logoname.responsive {
+    padding-left: 0%;
+    inset: 0;
+    margin: 1.5rem auto auto auto;
+    font-size: 3rem;
+  }
+
+  .openleft {
+    visibility: visible;
+    left: 0;
+  }
+
+  .openright {
+    visibility: visible;
+    right: 0;
+  }
+
+  .headerclass.responsive {
+    height: 50%;
+    z-index: 5;
+    flex-direction: column;
+  }
+
+  .navbar.responsive {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    margin: auto;
+    inset: 0;
+    text-align: center;
+  }
+
+  .navlink.responsive {
+    margin: 2.5% 0;
+  }
+
+  .closeright {
+    margin: 5% auto;
+    position: relative;
+    visibility: visible;
+    inset: 0;
+  }
+
+  .closeleft {
+    margin: 5% auto;
+    position: relative;
+    visibility: visible;
+    inset: 0;
+    z-index: 6;
+  }
+
+  .plate_bg.responsive.show_bg {
+    transform: translateX(0%);
+    width: 50%;
+    z-index: 5;
+  }
+}
