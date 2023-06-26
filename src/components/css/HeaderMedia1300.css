@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .headerbutton {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    top: 9%;
+  }
+
+  .navbar {
+    height: 0;
+    width: 0;
+  }
+
+  .logoname.responsive {
+    padding-left: 0%;
+    inset: 0;
+    margin: 1.5rem auto auto auto;
+  }
+
+  .openright {
+    visibility: visible;
+    right: 0;
+  }
+
+  .headerclass.responsive {
+    height: 50%;
+    z-index: 5;
+    flex-direction: column;
+  }
+
+  .navbar.responsive {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    margin: auto;
+    inset: 0;
+    text-align: center;
+  }
+
+  .navlink.responsive {
+    margin: 2.5% 0;
+  }
+
+  .closeright {
+    margin: 5% auto;
+    position: relative;
+    visibility: visible;
+    inset: 0;
+  }
+}
