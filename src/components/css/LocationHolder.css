@@ -1,0 +1,30 @@
+.locationholder {
+  position: relative;
+  z-index: 1;
+  font-family: "Metrophobic", sans-serif;
+  margin: 1rem 0rem 0rem 2rem;
+  height: 25rem;
+  width: 15rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+  clip-path: inset(0);
+}
+
+.searchtag:focus {
+  background-color: antiquewhite;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #ebac85a8;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6301;
+  border-radius: 0.5rem;
+}
