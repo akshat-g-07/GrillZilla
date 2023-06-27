@@ -1,0 +1,6 @@
+.open,
+.selected {
+  background-color: #ec9a66cc;
+  transform: perspective(50rem) translateZ(-2.5rem);
+  border-radius: 0.25rem;
+}
