@@ -1,0 +1,24 @@
+.mapdataholder {
+  margin: 0.25rem 0.75rem;
+  padding: 0rem 4rem;
+  display: flex;
+  height: 7rem;
+  justify-content: space-between;
+}
+
+.even {
+  direction: rtl;
+}
+
+.mapholder {
+  height: 7rem;
+  width: 15rem;
+}
+
+.placename {
+  margin: 2rem;
+  font-family: "Metrophobic", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  pointer-events: none;
+}
