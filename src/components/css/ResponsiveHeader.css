@@ -1,0 +1,42 @@
+.headerclass {
+  z-index: 0;
+  transition: all 1s;
+  width: 100%;
+}
+
+.headerbutton {
+  background-color: #ee540d;
+  border-radius: 50%;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.background_img.responsive {
+  height: 100vh;
+  inset: 0;
+  margin: auto;
+}
+
+.menu_bg.responsive {
+  width: 44.5%;
+  right: 13%;
+  height: 80%;
+}
+
+.plate_bg.responsive {
+  height: 100vh;
+  width: 20%;
+  transition: all 0.5s;
+}
+
+.inner_bg.responsive {
+  margin: 0;
+  top: 7.5rem;
+  left: 35%;
+  height: 72.5%;
+}
+
+.logoname.responsive {
+  padding-left: 20%;
+}
