@@ -9,7 +9,6 @@
 
 .cityheadercontainer {
   display: flex;
-  border-bottom: 0.2rem solid black;
   font-family: "Nunito", sans-serif;
   font-size: 1.75rem;
 }
@@ -17,8 +16,6 @@
 .cityheader {
   margin: 0.25rem 0.5rem 0rem;
   padding: 0.25rem 0.5rem 0rem;
-  background-image: linear-gradient(to top, #ee540da8, #ecbba4a8);
-  border-bottom: 5px solid #ee540d;
 }
 
 .cityheader.inview::after {
@@ -42,4 +39,13 @@
 .cityheader.inview {
   background-image: none;
   border-bottom: none;
+}
+
+.show {
+  background-image: linear-gradient(to top, #ee540da8, #ecbba4a8);
+  border-bottom: 5px solid #ee540d;
+}
+
+.cityheadershow {
+  border-bottom: 3.5px solid black;
 }
