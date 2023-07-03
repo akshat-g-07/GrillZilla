@@ -24,6 +24,7 @@ header {
 nav {
   font-family: "Metrophobic", sans-serif;
   margin: 0rem 2rem 0.5rem 0rem;
+  display: flex;
 }
 
 .navlink {
@@ -31,5 +32,26 @@ nav {
   text-decoration: none;
   margin: 0rem 1.7rem;
   cursor: pointer;
+  transition: all 0.5s;
   font-size: 1.25rem;
+}
+
+.navlink::after {
+  content: "";
+  background-color: #ee540d;
+  display: flex;
+  scale: 0 1;
+  height: 2.5px;
+  position: relative;
+  top: -8px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.navlink:hover::after,
+.navlink:hover {
+  top: 8px;
+  scale: 1.15 1;
+  opacity: 1;
+  font-size: 1.5rem;
 }
