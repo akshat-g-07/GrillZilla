@@ -4,6 +4,7 @@
   position: absolute;
   z-index: 1;
   top: 17.5%;
+  transition: all 0.5s;
 }
 
 .chefnameholder {
