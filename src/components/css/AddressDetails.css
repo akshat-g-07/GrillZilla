@@ -3,14 +3,13 @@
   direction: ltr;
   text-align: center;
   box-shadow: 2px 5px 15px black;
-  background-image: linear-gradient(to bottom, #ee540d, #ecbba4);
+  background-image: linear-gradient(to top, #ee540dd7, #ecbba4d7);
+  border-bottom: 5px solid #ee540d;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
   font-family: "Staatliches", cursive;
   font-size: 0.7rem;
   letter-spacing: 0.5px;
-  height: auto;
-}
-
-.hide {
-  overflow: hidden;
-  height: 0rem;
+  height: 0;
+  color: rgb(36, 41, 41);
 }
