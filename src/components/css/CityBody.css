@@ -20,3 +20,10 @@
   background-image: none;
   border-bottom: none;
 }
+
+.citybodycontainer {
+  height: 22.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
